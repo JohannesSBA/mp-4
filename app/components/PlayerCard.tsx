@@ -1,17 +1,15 @@
 import Image from "next/image";
 
-export interface PlayerCardProps {
-  player: {
-    id: number;
-    name: string;
-    age: number;
-    number: number;
-    position: string;
-    photo: string;
-  };
+export interface player {
+  id: number;
+  name: string;
+  age: number;
+  number: number;
+  position: string;
+  photo: string;
 }
 
-export default function PlayerCard({ player }: PlayerCardProps) {
+export default function PlayerCard(player: player) {
   return (
     <div className="flex gap-4 shadow-md rounded-md p-6">
       <Image

@@ -1,10 +1,6 @@
-"use server";
-
 import PlayerCard from "@/app/components/PlayerCard";
-import { PlayerCardProps } from "@/app/components/PlayerCard";
+import type { player } from "@/app/components/PlayerCard";
 import Link from "next/link";
-
-type Player = PlayerCardProps["player"];
 
 interface PageProps {
   params: {
@@ -39,8 +35,16 @@ export default async function TeamPage({ params }: PageProps) {
         </h1>
       </div>
       <div className="grid grid-cols-1 gap-6 sm:grid-cols-2 lg:grid-cols-3">
-        {players.map((player: Player) => (
-          <PlayerCard key={player.id} player={player} />
+        {players.map((player: player) => (
+          <PlayerCard
+            key={player.id}
+            id={player.id}
+            name={player.name}
+            age={player.age}
+            number={player.number}
+            position={player.position}
+            photo={player.photo}
+          />
         ))}
       </div>
     </div>

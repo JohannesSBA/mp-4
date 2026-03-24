@@ -1,5 +1,6 @@
 import Image from "next/image";
 import Link from "next/link";
+
 interface gridListProps {
   team: {
     id: number;
