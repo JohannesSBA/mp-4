@@ -36,7 +36,7 @@ export default function GridList({ data }: { data: gridListProps[] }) {
                 width={100}
                 height={100}
                 src={team.team.logo}
-                className="size-10 shrink-0 rounded-full bg-gray-300 outline -outline-offset-1 outline-black/5 dark:bg-gray-700 dark:outline-white/10"
+                className="size-10 shrink-0 rounded-full bg-gray-300 outline  dark:bg-gray-700 dark:outline-white/10"
               />
               <div className="flex flex-col items-start justify-start">
                 <div className="flex items-center ">
@@ -44,7 +44,7 @@ export default function GridList({ data }: { data: gridListProps[] }) {
                     {team.team.name}
                   </h3>
                 </div>
-                <p className="mt-1 truncate text-sm text-gray-500 dark:text-gray-400">
+                <p className="mt-1 text-sm text-gray-500 dark:text-gray-400">
                   {team.team.founded}
                 </p>
               </div>
